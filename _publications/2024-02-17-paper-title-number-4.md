@@ -37,8 +37,9 @@ The eigenvalues of $$A$$ are the roots of the polynomial $$P(\lambda) = |A - \la
 	\end{bmatrix}$$. This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
 	
 #### Examples
-	
-###### {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
+<video width="640" height="480" controls loop="" muted="" autoplay="">
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/LinearTransformationScene2.mp4">
+</video>###### {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
 $$$$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$$$
 	The first example we'll look at is the Fibonacci sequence (OEIS \href{https://oeis.org/A000045}{A000045}). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
 		1 & 1 \\ 1 & 0
