@@ -4,14 +4,10 @@ collection: publications
 permalink: /publication/fibonacci
 excerpt: 'Based on Miniature 1 and 2, this paper discusses the ways in which Fibonacci Numbers can be calculated faster. '
 date: 2024-06-25
-venue: 'IIT Gandhinagar'
+venue: 'Summer 2024 · CS691-XVIII · Applications of Linear Algebra, IIT Gandhinagar'
 paperurl: 'http://academicpages.github.io/files/paper3.pdf'
 citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
 ---
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
-
-#### Summer 2024 · CS691-XVIII · Applications of Linear Algebra
 ##### Course Project loosely based on Miniature 1 and 2 from the book "Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra" by Jiřì Matoušek 
 
 ###### By Sourabh Warrier & Cherian George
@@ -39,7 +35,9 @@ The eigenvalues of $$A$$ are the roots of the polynomial $$P(\lambda) = |A - \la
 #### Examples
 <video width="640" height="480" controls loop muted="" autoplay>
 <source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/LinearTransformationScene2.mp4">
-</video>###### {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
+</video>
+##### Fibonacci Sequence
+###### {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
 $$$$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$$$
 	The first example we'll look at is the Fibonacci sequence ([OEIS A000045](https://oeis.org/A000045)). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
 		1 & 1 \\ 1 & 0
