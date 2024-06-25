@@ -1,10 +1,10 @@
 ---
-title: "Paper Title Number 4"
+title: "Fibonacci Numbers, Faster"
 collection: publications
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
+permalink: /publication/fibonacci
+excerpt: 'Based on Miniature 1 and 2, this paper discusses the ways in which Fibonacci Numbers can be calculated faster. '
+date: 2024-06-25
+venue: 'IIT Gandhinagar'
 paperurl: 'http://academicpages.github.io/files/paper3.pdf'
 citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
 ---
@@ -37,11 +37,11 @@ The eigenvalues of $$A$$ are the roots of the polynomial $$P(\lambda) = |A - \la
 	\end{bmatrix}$$. This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
 	
 #### Examples
-<video width="640" height="480" controls loop="" muted="" autoplay="">
+<video width="640" height="480" controls loop muted="" autoplay>
 <source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/LinearTransformationScene2.mp4">
 </video>###### {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
 $$$$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$$$
-	The first example we'll look at is the Fibonacci sequence (OEIS \href{https://oeis.org/A000045}{A000045}). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
+	The first example we'll look at is the Fibonacci sequence ([OEIS A000045](https://oeis.org/A000045)). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
 		1 & 1 \\ 1 & 0
 	\end{bmatrix}$$, $$v_0 = \begin{bmatrix}
 		1 \\ 1
@@ -84,7 +84,7 @@ $$$$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$$$
 ##### {$$S_n = S_{n-2} + 2S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
 $$1, 1, 3, 7, 17, 41, 99, 239, 577, 1393, ...$$
 
-This is sequence \href{https://oeis.org/A001333}{A001333} in the OEIS. Each term is the sum of twice the previous term and once the term before that. The base cases are identical to that of the Fibonacci sequence. The transformation for this sequence is $$A = \begin{bmatrix}
+This is sequence [A001333](https://oeis.org/A001333) in the OEIS. Each term is the sum of twice the previous term and once the term before that. The base cases are identical to that of the Fibonacci sequence. The transformation for this sequence is $$A = \begin{bmatrix}
 		2 & 1 \\ 1 & 0
 	\end{bmatrix}$$ and the characteristic polynomial $$\lambda^2-2\lambda -1 = 0$$. The eigenvalues and eigenvectors of $$A$$ are $$\lambda_1 = \frac{2 + \sqrt{8}}{2}$$, $$\lambda_2 = \frac{2 - \sqrt{8}}{2}$$, $$\phi_1 = \begin{bmatrix}
 		1 \\ \lambda_1-2
