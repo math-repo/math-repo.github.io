@@ -12,6 +12,11 @@ citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub J
 
 ###### By Sourabh Warrier & Cherian George
 
+
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/Intro.mp4">
+</video>
+
 Consider the following sequence,
 	$$S_n = a_1S_{n-k} + a_2S_{n-k+1} +... + a_kS_{n-1} \ni a_i \in \mathbb{R}$$
 	
