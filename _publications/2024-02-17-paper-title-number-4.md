@@ -29,7 +29,12 @@ $$v_0 = \begin{bmatrix}
 	\end{bmatrix} \ni v_1 = Av_0$$, where $$A$$ is a linear transformation. The entries of $$A$$ would depend on the coefficients $$a_1$$ to $$a_k$$ specific to the sequence. In this case $$A = \begin{bmatrix}
 		a_k & a_{k-1} & a_{k-2} & ... & a_1 \\ 1 & ...& 0 & 0 & 0 \\.\\.\\.\\ 0 & ...& 1 & 0 & 0 \\ 0 & ...& 0 & 1 & 0 \end{bmatrix}$$
 
- 
+
+<center>
+ <video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/CombineScenes.mp4">
+</video>
+</center>
 #### Eigenbasis of $$A$$
 The eigenvalues of $$A$$ are the roots of the polynomial $$P(\lambda) = |A - \lambda{I}| = 0$$. Suppose by some means, eigenvalues $$\lambda_1$$ to $$\lambda_k$$ and their corresponding eigenvectors $$\phi_1$$ to $$\phi_k$$ could be obtained. The transformation $$A$$ can be written as $$PDP^{-1}$$, where $$P = \begin{bmatrix}
 		\phi_1 & \phi_2 & ... & \phi_k
