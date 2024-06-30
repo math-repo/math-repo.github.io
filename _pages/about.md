@@ -1,49 +1,159 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Fibonacci Numbers, Quickly"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+##### Course Project loosely based on Miniature 1 and 2 from the book "Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra" by Jiřì Matoušek 
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+###### By Sourabh Warrier & Cherian George
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/Intro.mp4">
+</video>
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Consider the following sequence,
+	$$S_n = a_1S_{n-k} + a_2S_{n-k+1} +... + a_kS_{n-1} \ni a_i \in \mathbb{R}$$
+	
+Any term is a linear combination of the previous $$k$$ terms and first $$k$$ terms $$S_1$$ to $$S_k$$ are given by the base cases $$b_1$$ to $$b_k$$ of the recursion. Given a set of $$k$$ terms in such a sequence, the process of obtaining subsequent terms can be represented as linear transformation of vectors in $$\mathbb{R}^k$$. Consider the following vectors,
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+$$v_0 = \begin{bmatrix}
+		S_{i+k-1} \\ S_{i+k-2}\\.\\.\\.\\ S_{i}
+	\end{bmatrix}$$ and $$v_1 = \begin{bmatrix}
+		S_{i+k} \\ S_{i+k-1}\\.\\.\\.\\ S_{i+1}
+	\end{bmatrix} \ni v_1 = Av_0$$, where $$A$$ is a linear transformation. The entries of $$A$$ would depend on the coefficients $$a_1$$ to $$a_k$$ specific to the sequence. In this case $$A = \begin{bmatrix}
+		a_k & a_{k-1} & a_{k-2} & ... & a_1 \\ 1 & ...& 0 & 0 & 0 \\.\\.\\.\\ 0 & ...& 1 & 0 & 0 \\ 0 & ...& 0 & 1 & 0 \end{bmatrix}$$
 
-**Markdown generator**
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+<center>
+ <video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/CombineScenes.mp4">
+</video>
+</center>
+#### Eigenbasis of $$A$$
+The eigenvalues of $$A$$ are the roots of the polynomial $$P(\lambda) = |A - \lambda{I}| = 0$$. Suppose by some means, eigenvalues $$\lambda_1$$ to $$\lambda_k$$ and their corresponding eigenvectors $$\phi_1$$ to $$\phi_k$$ could be obtained. The transformation $$A$$ can be written as $$PDP^{-1}$$, where $$P = \begin{bmatrix}
+		\phi_1 & \phi_2 & ... & \phi_k
+	\end{bmatrix}$$ and $$D = \begin{bmatrix}
+		\lambda_1 & 0 & ... & 0 \\ 0 & \lambda_2 & ... & 0 \\ .\\.\\.\\ 0 & 0 & ... & \lambda_k
+	\end{bmatrix}$$. This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
+	
+#### Examples
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/LinearTransformationScene2.mp4">
+</video>
+##### Fibonacci Sequence
+###### {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
+$$$$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$$$
+	The first example we'll look at is the Fibonacci sequence ([OEIS A000045](https://oeis.org/A000045)). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
+		1 & 1 \\ 1 & 0
+	\end{bmatrix}$$, $$v_0 = \begin{bmatrix}
+		1 \\ 1
+	\end{bmatrix}$$ and $$P(\lambda) = |A - \lambda{I} = 0| \implies \lambda^2 - \lambda -1 = 0$$, giving us $$\lambda_1 = \frac{1+\sqrt{5}}{2}$$ and $$\lambda_2 = \frac{1-\sqrt{5}}{2}$$. With the augmented matrix 
+	$$\left[\hspace{-5pt}\begin{array}{cc|c}
+		1-\lambda & 1 & 0 \\
+		1 & -\lambda & 0
+	\end{array}\hspace{-5pt}\right]$$, written in REF as 
+	$$\left[\hspace{-5pt}\begin{array}{cc|c}
+		1-\lambda & 1 & 0 \\
+		0 & \frac{\lambda^2 - \lambda-1}{1-\lambda} & 0
+	\end{array}\hspace{-5pt}\right] \implies \phi = \begin{bmatrix}
+		1 \\ \lambda-1
+	\end{bmatrix}$$. Plugging in $$\lambda_1$$ and $$\lambda_2$$ we find that $$\phi_1 = \begin{bmatrix}
+		1 \\ \lambda_1 -1
+	\end{bmatrix}$$ and $$\phi_2 = \begin{bmatrix}
+		1 \\ \lambda_2 -1
+	\end{bmatrix}$$. Here, $$P = \begin{bmatrix}
+		1 & 1 \\ \lambda_1 -1 & \lambda_2 -1
+	\end{bmatrix}$$, $$D = \begin{bmatrix}
+		\lambda_1 & 0 \\ 0 & \lambda_2
+	\end{bmatrix}$$ and $$P^{-1} = \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		\lambda_2 -1 & -1 \\ 1-\lambda_1 & 1
+	\end{bmatrix}$$. Since $$v_n=A^nv_0 = PD^nP^{-1}v_0$$, we look at the first coordinate of $$PD^{n-2}P^{-1}v_0$$ to obtain the $$n^{th}$$ term of the sequence. This gives us $$\begin{bmatrix}
+		S_n \\ S_{n-1}
+	\end{bmatrix}=\frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		1 & 1 \\ \lambda_1 -1 & \lambda_2 -1
+	\end{bmatrix} \begin{bmatrix}
+		\lambda_1^{n-2} & 0 \\ 0 & \lambda_2^{n-2}
+	\end{bmatrix}\begin{bmatrix}
+		\lambda_2 -1 & -1 \\ 1-\lambda_1 & 1
+	\end{bmatrix}\begin{bmatrix}
+		1 \\ 1
+	\end{bmatrix} = \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1)\\
+		\lambda_1^{n-2}(\lambda_1-1)(\lambda_2-2) + \lambda_2^{n-2}(\lambda_2-1)(2-\lambda_1)
+	\end{bmatrix}$$. Extracting $$S_n$$, from where $$S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1)) = \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(\lambda_1+1)-\lambda_2^{n-2}(\lambda_2+1)) \{\because \lambda2 = 1-\lambda_1\}$$. Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplifies to $$\frac{1}{\lambda_1-\lambda_2}(\lambda_1^n-\lambda_2^n)$$. Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
+	$$S_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
+	
+##### {$$S_n = S_{n-2} + 2S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
+$$1, 1, 3, 7, 17, 41, 99, 239, 577, 1393, ...$$
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+This is sequence [A001333](https://oeis.org/A001333) in the OEIS. Each term is the sum of twice the previous term and once the term before that. The base cases are identical to that of the Fibonacci sequence. The transformation for this sequence is $$A = \begin{bmatrix}
+		2 & 1 \\ 1 & 0
+	\end{bmatrix}$$ and the characteristic polynomial $$\lambda^2-2\lambda -1 = 0$$. The eigenvalues and eigenvectors of $$A$$ are $$\lambda_1 = \frac{2 + \sqrt{8}}{2}$$, $$\lambda_2 = \frac{2 - \sqrt{8}}{2}$$, $$\phi_1 = \begin{bmatrix}
+		1 \\ \lambda_1-2
+	\end{bmatrix}$$ and $$\phi_2 = \begin{bmatrix}
+		1 \\ \lambda_2-2
+	\end{bmatrix}$$.
+	
+$$P = \begin{bmatrix}
+		1 & 1 \\ \lambda_1 -2 & \lambda_2 -2
+	\end{bmatrix}$$, $$D = \begin{bmatrix}
+		\lambda_1 & 0 \\ 0 & \lambda_2
+	\end{bmatrix}$$ and $$P^{-1} = \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		\lambda_2 -2 & -1 \\ 2-\lambda_1 & 1
+	\end{bmatrix}$$ and 
+	$$\begin{bmatrix}
+		S_n \\ S_{n-1}
+	\end{bmatrix}=\frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		1 & 1 \\ \lambda_1 -2 & \lambda_2 -2
+	\end{bmatrix} \begin{bmatrix}
+		\lambda_1^{n-2} & 0 \\ 0 & \lambda_2^{n-2}
+	\end{bmatrix}\begin{bmatrix}
+		\lambda_2 -2 & -1 \\ 2-\lambda_1 & 1
+	\end{bmatrix}\begin{bmatrix}
+		1 \\ 1
+	\end{bmatrix} \implies S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-3)+\lambda_2^{n-2}(3-\lambda_1)) = \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(3-\lambda_2)-\lambda_2^{n-2}(3-\lambda_1))$$, which simplifies to the formula
+	$$S_n = \frac{1}{2+\sqrt{8}}\left(1+\sqrt{2}\right)^{n} + \frac{1}{2-\sqrt{8}}\left(1-\sqrt{2}\right)^{n}$$
+	
+##### {General solution for k = 2}
+$$S_n = a_1S_{n-2} + a_2S_{n-1}, \hspace{10 mm}\{S_1 = b_1,S_2 = b_2\}$$
+	
+In the general case when the $$n^{th}$$ term is a linear combination of the previous two terms with coefficients $$a_1$$ and $$a_2$$ and base cases $$b_1$$ and $$b_2$$, we represent the corresponding transformation by $$A = \begin{bmatrix}
+		a_2 & a_1 \\ 1 & 0
+	\end{bmatrix}$$. The eigenvalues of $$A$$ are obtained by solving $$\lambda^2-a_2\lambda - a_1 = 0$$, from where $$\lambda_1 = \frac{a_2 + \sqrt{a_2^2+4a_1}}{2}$$ and $$\lambda_2 = \frac{a_2 - \sqrt{a_2^2+4a_1}}{2}$$. Solving $$\left[\hspace{-5pt}\begin{array}{cc|c}
+		a_2-\lambda & a_1 & 0 \\
+		1 & -\lambda & 0
+	\end{array}\hspace{-5pt}\right] \rightsquigarrow \left[\hspace{-5pt}\begin{array}{cc|c}
+		a_2-\lambda & a_1 & 0 \\
+		0 & \frac{\lambda^2-a_2\lambda-a_1}{a_2-\lambda} & 0
+	\end{array}\hspace{-5pt}\right] \implies \phi_1 = \begin{bmatrix}
+		1 \\ \frac{\lambda_1-a_2}{a_1}
+	\end{bmatrix}$$ and $$\phi_2 = \begin{bmatrix}
+		1 \\ \frac{\lambda_2-a_2}{a_1}
+	\end{bmatrix}$$. $$P = \begin{bmatrix}
+		1 & 1 \\ \frac{\lambda_1-a_2}{a_1} & \frac{\lambda_2-a_2}{a_1}
+	\end{bmatrix}$$, $$D = \begin{bmatrix}
+		\lambda_1 & 0 \\ 0 & \lambda_2
+	\end{bmatrix}$$, and $$P^{-1} = \frac{a_1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		\frac{\lambda_2-a_2}{a_1} & -1 \\ \frac{a_2-\lambda_1}{a_1} & 1
+	\end{bmatrix}$$. We obtain $$v_{n-2}$$ from the expression 
+	
+$$\begin{bmatrix}
+		S_n \\ S_{n-1}
+	\end{bmatrix}=\frac{a_1}{\lambda_2-\lambda_1}\begin{bmatrix}
+		1 & 1 \\ \frac{\lambda_1-a_2}{a_1} & \frac{\lambda_2-a_2}{a_1}
+	\end{bmatrix} \begin{bmatrix}
+		\lambda_1^{n-2} & 0 \\ 0 & \lambda_2^{n-2}
+	\end{bmatrix}\begin{bmatrix}
+		\frac{\lambda_2-a_2}{a_1} & -1 \\ \frac{a_2-\lambda_1}{a_1} & 1
+	\end{bmatrix}\begin{bmatrix}
+		b_2 \\ b_1
+	\end{bmatrix}$$,
+	from where $$S_n = \frac{a_1}{\lambda_2-\lambda_1}\left(\lambda_1^{n-2}\left(\frac{b_2(\lambda_2-a_2)}{a_1} - b_1\right) + \lambda_2^{n-2}\left(\frac{b_2(a_2-\lambda_1)}{a_1} + b_1\right)\right)$$ 
+	
+$$= \frac{1}{\lambda_1-\lambda_2}\left(\lambda_1^{n-2}\left(a_1b_1+b_2\lambda_1\right) - \lambda_2^{n-2}\left(a_1b_1+b_2\lambda_2\right)\right)$$. This produces the following formula
+	TBC...
