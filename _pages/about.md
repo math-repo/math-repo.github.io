@@ -18,52 +18,56 @@ redirect_from:
 </center>
 
 
-####  Linear recurrence relations
+##  Linear recurrence relations
 
 
 Given below is the general form of a linear homogeneous recurrence relation. \\
 $$S_n = a_kS_{n-1} + a_{k-1}S_{n-2} +... + a_1S_{n-k} \ni a_i \in \mathbb{R}$$
 
 Any term is a linear combination of the previous $$k$$ terms and first $$k$$ terms $$S_1$$ to $$S_k$$ are given by the initial values $$b_1$$ to $$b_k$$. Given a set of $$k$$ terms in such a sequence, the process of obtaining subsequent terms can be represented as a linear transformation of vectors in $$\mathbb{R}^k$$. Consider the following vectors.
-$$\vspace{3mm}$$
+
+<br/>
 
 $$v_{i-1} = \begin{bmatrix}
 S_{i+k-1} \\ S_{i+k-2}\\.\\.\\.\\ S_{i}
 \end{bmatrix}$$ and $$v_{i} = \begin{bmatrix}
 S_{i+k} \\ S_{i+k-1}\\.\\.\\.\\ S_{i+1}
 \end{bmatrix} \ni v_1 = Av_0$$, where $$A$$ is a linear transformation.
-$$\vspace{3mm}$$
 
-The entries of $$A$$ would depend on the coefficients\cite{everest2003recurrence} $$a_1$$ to $$a_k$$ from the sequence. 
-\vspace{3mm}
+<br/>
+
+The entries of $$A$$ would depend on the coefficients $$a_1$$ to $$a_k$$ from the sequence. 
+<br/><br/>
 
 For this to be true, $$A = \begin{bmatrix}
 a_k & a_{k-1} & a_{k-2} & ... & a_1 \\ 1 & ...& 0 & 0 & 0 \\.\\.\\.\\ 0 & ...& 1 & 0 & 0 \\ 0 & ...& 0 & 1 & 0 \end{bmatrix}$$
 
-####  {Eigenbasis of $$A$$}
+###  Eigenbasis of $$A$$
 The eigenvalues of $$A$$ are the roots of the polynomial $$P(\lambda) = |A - \lambda{I_k}| = 0$$. Using the eigenvalues of $$A$$, $$\lambda_1$$ to $$\lambda_k$$ and their corresponding eigenvectors $$\phi_1$$ to $$\phi_k$$, the transformation $$A$$ can be written as $$PDP^{-1}$$, where
-\vspace{3mm}
+<br/><br/>
 
 $$P = \begin{bmatrix}
 \phi_1 & \phi_2 & ... & \phi_k
 \end{bmatrix}$$ and $$D = \begin{bmatrix}
 \lambda_1 & 0 & ... & 0 \\ 0 & \lambda_2 & ... & 0 \\ .\\.\\.\\ 0 & 0 & ... & \lambda_k
 \end{bmatrix}$$.
-\vspace{3mm}
+<br/><br/>
 
 This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
 
-####  {Examples}
+##  Examples
 
-#####  {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
+###  {$$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
+<br/>
 $$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$
-The first example\cite{matousek2010thirty} we'll look at is the Fibonacci sequence (OEIS \href{https://oeis.org/A000045}{A000045}). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
+<br/>
+The first example we'll look at is the Fibonacci sequence [OEIS](https://oeis.org/A000045}{A000045}). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
 1 & 1 \\ 1 & 0
 \end{bmatrix}$$, $$v_0 = \begin{bmatrix}
 1 \\ 1
 \end{bmatrix}$$ and
 
-\vspace{2mm}
+<br/>
 
 $$P(\lambda) = |A - \lambda{I_2}| = 0 \implies \lambda^2 - \lambda -1 = 0$$, giving us $$\lambda_1 = \frac{1+\sqrt{5}}{2}$$ and $$\lambda_2 = \frac{1-\sqrt{5}}{2}$$. Solving for $$\lambda$$ and $$\phi$$,
 $$\left[\hspace{-5pt}\begin{array}{cc|c}
@@ -98,14 +102,14 @@ S_n \\ S_{n-1}
 \end{bmatrix}$$ $$= \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
 \lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1)\\
 \lambda_1^{n-2}(\lambda_1-1)(\lambda_2-2) + \lambda_2^{n-2}(\lambda_2-1)(2-\lambda_1)
-\end{bmatrix}$$Extracting $$S_n$$, $$S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1))$$ $$= \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(\lambda_1+1)-\lambda_2^{n-2}(\lambda_2+1)) \{\because \lambda2 = 1-\lambda_1\}$$Since from the characteristic equation\cite{rosen1999discrete}, $$\lambda +1 = \lambda^2$$, this simplifies to $$\frac{1}{\lambda_1-\lambda_2}(\lambda_1^n-\lambda_2^n)$$. Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
+\end{bmatrix}$$Extracting $$S_n$$, $$S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1))$$ $$= \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(\lambda_1+1)-\lambda_2^{n-2}(\lambda_2+1)) \{\because \lambda2 = 1-\lambda_1\}$$Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplifies to $$\frac{1}{\lambda_1-\lambda_2}(\lambda_1^n-\lambda_2^n)$$. Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
 $$S_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
 
 #####  {$$S_n = S_{n-2} + 2S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$}
 $$1, 1, 3, 7, 17, 41, 99, 239, 577, 1393, ...$$
-This is sequence \href{https://oeis.org/A001333}{A001333} in the OEIS, closely related to the \href{https://oeis.org/A000129}{Pell Numbers}. Each term is the sum of twice the previous term and once the term before that. The base cases are identical to that of the Fibonacci sequence. The transformation for this sequence is $$A = \begin{bmatrix}
+This is sequence [A001333](https://oeis.org/A001333) in the OEIS, closely related to the [Pell Numbers](https://oeis.org/A000129). Each term is the sum of twice the previous term and once the term before that. The base cases are identical to that of the Fibonacci sequence. The transformation for this sequence is $$A = \begin{bmatrix}
 2 & 1 \\ 1 & 0
-\end{bmatrix}$$ and the characteristic polynomial\cite{Markushevich1983recursion} $$\lambda^2-2\lambda -1 = 0$$. The eigenvalues and eigenvectors of $$A$$ are $$\lambda_1 = \frac{2 + \sqrt{8}}{2}$$, $$\lambda_2 = \frac{2 - \sqrt{8}}{2}$$, $$\phi_1 = \begin{bmatrix}
+\end{bmatrix}$$ and the characteristic polynomial $$\lambda^2-2\lambda -1 = 0$$. The eigenvalues and eigenvectors of $$A$$ are $$\lambda_1 = \frac{2 + \sqrt{8}}{2}$$, $$\lambda_2 = \frac{2 - \sqrt{8}}{2}$$, $$\phi_1 = \begin{bmatrix}
 1 \\ \lambda_1-2
 \end{bmatrix}$$ and $$\phi_2 = \begin{bmatrix}
 1 \\ \lambda_2-2
@@ -140,7 +144,7 @@ $$A = \begin{bmatrix}
 	m & 1\\1 & 0
 \end{bmatrix}$$
 
-The eigenvalues of $$A$$ are the roots to the equation $$\lambda^2-m\lambda-1 = 0$$, with $$\lambda = \frac{m \pm \sqrt{m^2+4}}{2}$$. The positive root to these equations are known as the metallic means\cite{gil2019generalized} and they have the following general form.
+The eigenvalues of $$A$$ are the roots to the equation $$\lambda^2-m\lambda-1 = 0$$, with $$\lambda = \frac{m \pm \sqrt{m^2+4}}{2}$$. The positive root to these equations are known as the metallic means and they have the following general form.
 
 $$\varphi_m = \frac{m+\sqrt{m^2+4}}{2}$$
 
@@ -196,7 +200,7 @@ $$\hspace{6 mm}-\left(\frac{2a_1b_1+a_2b_2-b_2\sqrt{a_2^2+4a_1}}{2\sqrt{a_2^2+4a
 #####  {$$S_n = S_{n-3} + S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 0, S_3 = 1\}$$}
 $$0, 0, 1, 1, 2, 4, 7, 13, 24, 44, ...$$
 
-This is often referred to as the Tribonacci sequence (OEIS \href{https://oeis.org/A000073}{A000073}). With some care, it is possible to repeat the above method to obtain a closed form for this sequence as well. Unlike the previous examples, complex numbers make their debut in this example. We quickly go through much of the same steps as before.
+This is often referred to as the Tribonacci sequence [OEIS](https://oeis.org/A000073}{A000073}). With some care, it is possible to repeat the above method to obtain a closed form for this sequence as well. Unlike the previous examples, complex numbers make their debut in this example. We quickly go through much of the same steps as before.
 
 $$A = \begin{bmatrix}
 1 & 1 & 1\\ 1 & 0 & 0\\ 0 & 1 & 0
@@ -250,7 +254,7 @@ $$+ (0.190790 + 0.018701i)\times(-0.419643 - 0.606291i)^{n-3}$$
 
 #####  {$$S_n = 3S_{n-1} -3S_{n-2} + S_{n-3}, \hspace{10 mm}\{S_1 = 1, S_2 = 4, S_3 = 9\}$$} 
 
-Another example of a third order sequence is the squares of natural numbers\cite{Markushevich1983recursion}. The choice of coefficients follows from
+Another example of a third order sequence is the squares of natural numbers. The choice of coefficients follows from
 
 $$(n+1)^2 = n^2 + 2n + 1$$
 $$(n-1)^2 = n^2  -2n +1$$
@@ -262,5 +266,5 @@ $$= (n-2)^2 - 3(n-1)^2+3n^2$$
 With $$S_n = n^2$$,
 $$S_n = 3S_{n-1} -3S_{n-2} + S_{n-3}$$
 
-The sequence of cubes of natural numbers is one of order 4. \cite{Markushevich1983recursion}p. 10
+The sequence of cubes of natural numbers is one of order 4. 
 
