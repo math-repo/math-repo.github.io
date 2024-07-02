@@ -7,19 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-##### Course Project loosely based on Miniature 1 and 2 from the book "Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra" by Jiřì Matoušek 
+### Course Project  based on Miniature 1 and 2 from the book "Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra" by Jiřì Matoušek 
 
 ###### By Sourabh Warrier & Cherian George
 
-
-<iframe src="https://drive.google.com/file/d/1XdRBspYXa8oOviLaxYHGc_bsSSNPNlaP/preview" width="640" height="480" allow="autoplay"></iframe>
-
 <center>
-<video width="640" height="480" controls loop muted="" autoplay>
-<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/Intro.mp4">
-</video>
+<iframe src="https://drive.google.com/file/d/1XdRBspYXa8oOviLaxYHGc_bsSSNPNlaP/preview" width="640" height="480" allow="autoplay"></iframe>
 </center>
-
 
 ##  Linear recurrence relations
 
@@ -58,20 +52,27 @@ $$P = \begin{bmatrix}
 <br/><br/>
 
 This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
-
+<hr>
 ##  Examples
 
 ##  $$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$
 <br/>
 $$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$
 <br/><br/>
+<center>
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/Intro.mp4">
+</video>
+</center>
 The first example we'll look at is the Fibonacci sequence [OEIS](https://oeis.org/A000045}{A000045}). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
 1 & 1 \\ 1 & 0
 \end{bmatrix}$$, $$v_0 = \begin{bmatrix}
 1 \\ 1
 \end{bmatrix}$$ and
 <br/>
-$$P(\lambda) = |A - \lambda{I_2}| = 0 \implies \lambda^2 - \lambda -1 = 0$$, giving us $$\lambda_1 = \frac{1+\sqrt{5}}{2}$$ and $$\lambda_2 = \frac{1-\sqrt{5}}{2}$$. <br/> Solving for $$\lambda$$ and $$\phi$$, <br/>
+$$P(\lambda) = |A - \lambda{I_2}| = 0 \implies \lambda^2 - \lambda -1 = 0$$, giving us $$\lambda_1 = \frac{1+\sqrt{5}}{2}$$ and $$\lambda_2 = \frac{1-\sqrt{5}}{2}$$.
+<br/><br/> Solving for $$\lambda$$ and $$\phi$$, <br/><br/>
+
 $$\left[\hspace{-5pt}\begin{array}{cc|c}
 	1-\lambda & 1 & 0 \\
 	1 & -\lambda & 0
@@ -81,7 +82,9 @@ $$\left[\hspace{-5pt}\begin{array}{cc|c}
 	0 & \frac{\lambda^2 - \lambda-1}{1-\lambda} & 0
 \end{array}\hspace{-5pt}\right] \implies \phi = \begin{bmatrix}
 1 \\ \lambda-1
-\end{bmatrix} <br/> $$Plugging in $$\lambda_1$$ and $$\lambda_2$$, we find that $$\phi_1 = \begin{bmatrix}
+\end{bmatrix} $$
+<br/>
+Plugging in $$\lambda_1$$ and $$\lambda_2$$, we find that $$\phi_1 = \begin{bmatrix}
 1 \\ \lambda_1 -1
 \end{bmatrix}$$ and $$\phi_2 = \begin{bmatrix}
 1 \\ \lambda_2 -1
@@ -91,7 +94,13 @@ $$\left[\hspace{-5pt}\begin{array}{cc|c}
 \lambda_1 & 0 \\ 0 & \lambda_2
 \end{bmatrix}\hspace{2mm} \text{and}\hspace{2mm} P^{-1} = \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
 \lambda_2 -1 & -1 \\ 1-\lambda_1 & 1
-\end{bmatrix}$$ <br/> Since $$v_n=A^nv_0 = PD^nP^{-1}v_0$$, we look at the first coordinate of $$PD^{n-2}P^{-1}v_0$$ to obtain the $$n^{th}$$ term of the sequence. <br/> This gives us, $$\begin{bmatrix}
+\end{bmatrix}$$ 
+<br/> <br/>
+Since $$v_n=A^nv_0 = PD^nP^{-1}v_0$$, we look at the first coordinate of $$PD^{n-2}P^{-1}v_0$$ to obtain the $$n^{th}$$ term of the sequence.
+<br/> 
+This gives us, 
+
+$$\begin{bmatrix}
 S_n \\ S_{n-1}
 \end{bmatrix}=\frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
 1 & 1 \\ \lambda_1 -1 & \lambda_2 -1
@@ -101,16 +110,26 @@ S_n \\ S_{n-1}
 \lambda_2 -1 & -1 \\ 1-\lambda_1 & 1
 \end{bmatrix}\begin{bmatrix}
 1 \\ 1
-\end{bmatrix}$$ $$= \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
+\end{bmatrix}$$ 
+
+$$= \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
 \lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1)\\
 \lambda_1^{n-2}(\lambda_1-1)(\lambda_2-2) + \lambda_2^{n-2}(\lambda_2-1)(2-\lambda_1)
 \end{bmatrix}$$ 
-<br/>
-Extracting $$S_n$$, $$S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1))$$ $$= \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(\lambda_1+1)-\lambda_2^{n-2}(\lambda_2+1)) \{\because \lambda2 = 1-\lambda_1\}$$
-<br/>
-Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplifies to $$\frac{1}{\lambda_1-\lambda_2}(\lambda_1^n-\lambda_2^n)$$. Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
-$$S_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
 
+<br/><br/>
+Extracting $$S_n$$, 
+
+$$S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1))$$ 
+
+$$= \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(\lambda_1+1)-\lambda_2^{n-2}(\lambda_2+1)) \{\because \lambda2 = 1-\lambda_1\}$$
+<br/><br/>
+
+Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplifies to $$\frac{1}{\lambda_1-\lambda_2}(\lambda_1^n-\lambda_2^n)$$. 
+
+Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
+$$S_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
+<hr>
 ##  $$S_n = S_{n-2} + 2S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$
 <br/>
 $$1, 1, 3, 7, 17, 41, 99, 239, 577, 1393, ...$$
@@ -134,7 +153,7 @@ $$P = \begin{bmatrix}
 \end{bmatrix} \hspace{2mm}\text{and}\hspace{2mm} P^{-1} = \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
 	\lambda_2 -2 & -1 \\ 2-\lambda_1 & 1
 \end{bmatrix}$$
-<br/>
+<br/><br/>
 $$\implies \begin{bmatrix}
 	S_n \\ S_{n-1}
 \end{bmatrix}=\frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
@@ -146,12 +165,13 @@ $$\implies \begin{bmatrix}
 \end{bmatrix}\begin{bmatrix}
 	1 \\ 1
 \end{bmatrix}$$ 
-<br/>
+<br/><br/>
 $$\implies S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-3)+\lambda_2^{n-2}(3-\lambda_1))$$ $$= \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(3-\lambda_2)-\lambda_2^{n-2}(3-\lambda_1))$$ which simplifies to the following formula.
 
 <br/>
 $$S_n = \frac{1}{2+\sqrt{8}}\left(1+\sqrt{2}\right)^{n} + \frac{1}{2-\sqrt{8}}\left(1-\sqrt{2}\right)^{n}$$
 
+<hr>
 
 ##  $$S_n = S_{n-2} + mS_{n-1}$$
 
@@ -166,7 +186,7 @@ The eigenvalues of $$A$$ are the roots to the equation $$\lambda^2-m\lambda-1 = 
 $$\varphi_m = \frac{m+\sqrt{m^2+4}}{2}$$
 
 When the first metallic mean (golden ratio) corresponds to the case $$m = 1$$. The mean so obtained from example 1.3.2 is the silver ratio. Although there isn't any formal nomenclature, the general consensus is that the third metallic is called the bronze ratio, followed by copper and nickel and so on.
-
+<hr>
 ##  General solution for second order recurrence relations
 $$S_n = a_1S_{n-2} + a_2S_{n-1}, \hspace{10 mm}\{S_1 = b_1,S_2 = b_2\}$$
 
@@ -176,7 +196,10 @@ a_2 & a_1 \\ 1 & 0
 <br/>
 The eigenvalues of $$A$$ are obtained by solving $$\lambda^2-a_2\lambda - a_1 = 0$$, from where $$\lambda_1 = \frac{a_2 + \sqrt{a_2^2+4a_1}}{2}$$ and $$\lambda_2 = \frac{a_2 - \sqrt{a_2^2+4a_1}}{2}$$. 
 <br/>
-Solving $$\left[\hspace{-5pt}\begin{array}{cc|c}
+
+Solving 
+
+$$\left[\hspace{-5pt}\begin{array}{cc|c}
 a_2-\lambda & a_1 & 0 \\
 1 & -\lambda & 0
 \end{array}\hspace{-5pt}\right]$$ $$\rightsquigarrow \left[\hspace{-5pt}\begin{array}{cc|c}
@@ -218,6 +241,8 @@ This produces the following formula
 $$S_n = \left(\frac{2a_1b_1+a_2b_2+b_2\sqrt{a_2^2+4a_1}}{2\sqrt{a_2^2+4a_1}}\right)\left(\frac{a_2+\sqrt{a_2^2+4a_1}}{2}\right)^{n-2}$$
 
 $$\hspace{6 mm}-\left(\frac{2a_1b_1+a_2b_2-b_2\sqrt{a_2^2+4a_1}}{2\sqrt{a_2^2+4a_1}}\right)\left(\frac{a_2-\sqrt{a_2^2+4a_1}}{2}\right)^{n-2}$$
+
+<hr>
 
 ##  Higher order sequences
 ##  $$S_n = S_{n-3} + S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 0, S_3 = 1\}$$
@@ -275,6 +300,8 @@ from where
 $$S_n \approxeq 0.618420\times(1.839287)^{n-3}$$
 $$+ (0.190790 - 0.018701i)\times(-0.419643 + 0.606291i)^{n-3}$$ 
 $$+ (0.190790 + 0.018701i)\times(-0.419643 - 0.606291i)^{n-3}$$
+
+<hr>
 
 ##  $$S_n = 3S_{n-1} -3S_{n-2} + S_{n-3}, \hspace{10 mm}\{S_1 = 1, S_2 = 4, S_3 = 9\}$$
 <br/>
