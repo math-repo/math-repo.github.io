@@ -124,7 +124,7 @@ Since $$v_n=A^nv_0 = PD^nP^{-1}v_0$$, we look at the first coordinate of $$PD^{n
 		</td>
 	</tr>
  	<tr>
-  		<td colspan="2">
+  		<td colspan="2" style="border:0px">
 			<center>
 			<video width="640" height="480" controls loop muted="" autoplay>
 			<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/02_Miniature_1.mp4">
