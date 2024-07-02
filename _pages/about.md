@@ -51,6 +51,13 @@ $$P = \begin{bmatrix}
 <br/><br/>
 
 This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
+
+<center>
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/04_PDPinv_Explanation.mp4">
+</video>
+</center>
+
 <hr>
 ##  Examples
 
@@ -60,7 +67,7 @@ $$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$
 <br/><br/>
 <center>
 <video width="640" height="480" controls loop muted="" autoplay>
-<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/Intro.mp4">
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/01_Intro.mp4">
 </video>
 </center>
 The first example we'll look at is the Fibonacci sequence [OEIS](https://oeis.org/A000045}{A000045}). From the definition, we have $$a_1 = a_2 = 1$$ and $$S_1 = S_2= 1$$. Therefore, $$A = \begin{bmatrix}
@@ -68,6 +75,12 @@ The first example we'll look at is the Fibonacci sequence [OEIS](https://oeis.or
 \end{bmatrix}$$, $$v_0 = \begin{bmatrix}
 1 \\ 1
 \end{bmatrix}$$ and
+<br/>
+<center>
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/02_Miniature_1.mp4">
+</video>
+</center>
 <br/>
 $$P(\lambda) = |A - \lambda{I_2}| = 0 \implies \lambda^2 - \lambda -1 = 0$$, giving us $$\lambda_1 = \frac{1+\sqrt{5}}{2}$$ and $$\lambda_2 = \frac{1-\sqrt{5}}{2}$$.
 <br/><br/> Solving for $$\lambda$$ and $$\phi$$, <br/><br/>
@@ -100,6 +113,26 @@ Here, $$P = \begin{bmatrix}
 <br/> <br/>
 Since $$v_n=A^nv_0 = PD^nP^{-1}v_0$$, we look at the first coordinate of $$PD^{n-2}P^{-1}v_0$$ to obtain the $$n^{th}$$ term of the sequence.
 <br/> 
+<table style="border:0px">
+	<tr style="border:0px">
+		<td style="border:0px">
+			<center>
+			<video width="320" height="240" controls loop muted="" autoplay>
+			<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/03_LinearTransformationScene1.mp4">
+			</video>
+			</center>
+		</td>
+			<center>
+			<video width="320" height="240" controls loop muted="" autoplay>
+			<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/06_LinearTransformationScene2.mp4">
+			</video>
+			</center>
+		<td style="border:0px">
+  
+		</td>
+	</tr>
+</table>
+<br/>
 This gives us, 
 
 $$\begin{bmatrix}
@@ -132,6 +165,13 @@ Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplif
 
 Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
 $$S_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
+
+<br/>
+<center>
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/05_Formula_Explanation.mp4">
+</video>
+</center>
 <hr>
 ##  $$S_n = S_{n-2} + 2S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$
 <br/>
@@ -329,3 +369,8 @@ $$S_n = 3S_{n-1} -3S_{n-2} + S_{n-3}$$
 
 The sequence of cubes of natural numbers is one of order 4. 
 
+<center>
+<video width="640" height="480" controls loop muted="" autoplay>
+<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/Fibonacci_Dot_Dance.mp4">
+</video>
+</center>
