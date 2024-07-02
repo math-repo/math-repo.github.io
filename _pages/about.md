@@ -7,16 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-### Course Project  based on Miniature 1 and 2 from the book "Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra" by Jiřì Matoušek 
-
-###### By Sourabh Warrier & Cherian George
-
 <center>
 <iframe src="https://drive.google.com/file/d/1XdRBspYXa8oOviLaxYHGc_bsSSNPNlaP/preview" width="640" height="480" allow="autoplay"></iframe>
 </center>
 
-##  Linear recurrence relations
+### Course Project  based on Miniature 1 and 2 from the book "Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra" by Jiřì Matoušek 
 
+#### By Sourabh Warrier & Cherian George
+
+##  Linear recurrence relations
 
 Given below is the general form of a linear homogeneous recurrence relation. \
 <br/>
@@ -84,11 +83,14 @@ $$\left[\hspace{-5pt}\begin{array}{cc|c}
 1 \\ \lambda-1
 \end{bmatrix} $$
 <br/>
+<br/>
 Plugging in $$\lambda_1$$ and $$\lambda_2$$, we find that $$\phi_1 = \begin{bmatrix}
 1 \\ \lambda_1 -1
 \end{bmatrix}$$ and $$\phi_2 = \begin{bmatrix}
 1 \\ \lambda_2 -1
-\end{bmatrix}$$. <br/> Here, $$P = \begin{bmatrix}
+\end{bmatrix}$$. 
+<br/><br/> 
+Here, $$P = \begin{bmatrix}
 1 & 1 \\ \lambda_1 -1 & \lambda_2 -1
 \end{bmatrix}\text{,}\hspace{2mm} D = \begin{bmatrix}
 \lambda_1 & 0 \\ 0 & \lambda_2
@@ -119,10 +121,11 @@ $$= \frac{1}{\lambda_2-\lambda_1}\begin{bmatrix}
 
 <br/><br/>
 Extracting $$S_n$$, 
-
+<center>
 $$S_n = \frac{1}{\lambda_2-\lambda_1}(\lambda_1^{n-2}(\lambda_2-2) + \lambda_2^{n-2}(2-\lambda_1))$$ 
 
 $$= \frac{1}{\lambda_1-\lambda_2}(\lambda_1^{n-2}(\lambda_1+1)-\lambda_2^{n-2}(\lambda_2+1)) \{\because \lambda2 = 1-\lambda_1\}$$
+</center>
 <br/><br/>
 
 Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplifies to $$\frac{1}{\lambda_1-\lambda_2}(\lambda_1^n-\lambda_2^n)$$. 
