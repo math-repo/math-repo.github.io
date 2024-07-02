@@ -51,20 +51,18 @@ $$P = \begin{bmatrix}
 <br/><br/>
 
 This gives us $$v_n=A^nv_0 = PD^nP^{-1}v_0$$.
-
 <center>
 <video width="640" height="480" controls loop muted="" autoplay>
 <source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/04_PDPinv_Explanation.mp4">
 </video>
 </center>
-
 <hr>
 ##  Examples
 
 ##  $$S_n = S_{n-2} + S_{n-1}, \hspace{10 mm}\{S_1 = S_2 = 1\}$$
 <br/>
 $$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...$$
-<br/><br/>
+<br/>
 <center>
 <video width="640" height="480" controls loop muted="" autoplay>
 <source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/01_Intro.mp4">
@@ -76,11 +74,6 @@ The first example we'll look at is the Fibonacci sequence [OEIS](https://oeis.or
 1 \\ 1
 \end{bmatrix}$$ and
 <br/>
-<center>
-<video width="640" height="480" controls loop muted="" autoplay>
-<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/02_Miniature_1.mp4">
-</video>
-</center>
 <br/>
 $$P(\lambda) = |A - \lambda{I_2}| = 0 \implies \lambda^2 - \lambda -1 = 0$$, giving us $$\lambda_1 = \frac{1+\sqrt{5}}{2}$$ and $$\lambda_2 = \frac{1-\sqrt{5}}{2}$$.
 <br/><br/> Solving for $$\lambda$$ and $$\phi$$, <br/><br/>
@@ -122,15 +115,23 @@ Since $$v_n=A^nv_0 = PD^nP^{-1}v_0$$, we look at the first coordinate of $$PD^{n
 			</video>
 			</center>
 		</td>
+		<td style="border:0px">
 			<center>
 			<video width="320" height="240" controls loop muted="" autoplay>
 			<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/06_LinearTransformationScene2.mp4">
 			</video>
 			</center>
-		<td style="border:0px">
-  
 		</td>
 	</tr>
+ 	<tr>
+  		<td span="2">
+			<center>
+			<video width="640" height="480" controls loop muted="" autoplay>
+			<source src="https://github.com/math-repo/math-repo.github.io/raw/master/_data/videos/02_Miniature_1.mp4">
+			</video>
+			</center>
+    		</td>
+  	</tr>
 </table>
 <br/>
 This gives us, 
@@ -165,7 +166,6 @@ Since from the characteristic equation, $$\lambda +1 = \lambda^2$$, this simplif
 
 Plugging in the values of $$\lambda_1$$ and $$\lambda_2$$ produces
 $$S_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
-
 <br/>
 <center>
 <video width="640" height="480" controls loop muted="" autoplay>
