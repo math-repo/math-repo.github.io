@@ -17,22 +17,22 @@ redirect_from:
 </video>
 </center>
 
-## {Part I}
-####  {Linear recurrence relations}
+
+####  Linear recurrence relations
 
 
-Given below is the general form of a linear homogeneous recurrence relation.\cite{Markushevich1983recursion} \
+Given below is the general form of a linear homogeneous recurrence relation. \\
 $$S_n = a_kS_{n-1} + a_{k-1}S_{n-2} +... + a_1S_{n-k} \ni a_i \in \mathbb{R}$$
 
 Any term is a linear combination of the previous $$k$$ terms and first $$k$$ terms $$S_1$$ to $$S_k$$ are given by the initial values $$b_1$$ to $$b_k$$. Given a set of $$k$$ terms in such a sequence, the process of obtaining subsequent terms can be represented as a linear transformation of vectors in $$\mathbb{R}^k$$. Consider the following vectors.
-\vspace{3mm}
+$$\vspace{3mm}$$
 
 $$v_{i-1} = \begin{bmatrix}
 S_{i+k-1} \\ S_{i+k-2}\\.\\.\\.\\ S_{i}
 \end{bmatrix}$$ and $$v_{i} = \begin{bmatrix}
 S_{i+k} \\ S_{i+k-1}\\.\\.\\.\\ S_{i+1}
 \end{bmatrix} \ni v_1 = Av_0$$, where $$A$$ is a linear transformation.
-\vspace{3mm}
+$$\vspace{3mm}$$
 
 The entries of $$A$$ would depend on the coefficients\cite{everest2003recurrence} $$a_1$$ to $$a_k$$ from the sequence. 
 \vspace{3mm}
