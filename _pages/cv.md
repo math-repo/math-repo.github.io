@@ -1,9 +1,9 @@
 ---
 title: "Find the Golden Ratio"
-permalink: /game/
+permalink: /g/
 author_profile: true
 redirect_from:
-  - /game
+  - /g
 ---
 
 {% include game.html %}
