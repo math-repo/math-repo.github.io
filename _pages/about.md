@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
+<br/><br/>
 <center>
 <iframe src="https://drive.google.com/file/d/1XdRBspYXa8oOviLaxYHGc_bsSSNPNlaP/preview" width="640" height="480" allow="autoplay"></iframe>
 </center>
